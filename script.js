@@ -43,8 +43,21 @@ team.forEach(member => {
 
 const teamContainer = document.getElementById('team-container');
 
+//BONUS
+
+// Creare le card per ogni membro del team e aggiungerle al DOM
+
 team.forEach(member => {
-    const memberInfo = document.createElement('p');
-    memberInfo.textContent = `Name: ${member.name}, Role: ${member.role}, Image: ${member.image}`;
-    teamContainer.append(memberInfo);
+    const memberCard = document.createElement('div');
+    memberCard.classList.add('col-md-4', 'team-card');
+    memberCard.innerHTML = `
+        <div class="card">
+            <img src="${member.image}" class="card-img-top" alt="${member.name}">
+            <div class="card-body text-center">
+                <h5 class="card-title">${member.name}</h5>
+                <p class="card-text">${member.role}</p>
+            </div>
+        </div>
+    `;
+    teamContainer.append(memberCard);
 });
