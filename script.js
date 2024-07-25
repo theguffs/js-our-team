@@ -1,4 +1,5 @@
-// milestone 000000 Creare un array di oggetti con le informazioni fornite
+// MILESTONE 000000 Creare un array di oggetti con le informazioni fornite
+
 const team = [
     {
         name: "Wayne Barnett",
@@ -31,3 +32,11 @@ const team = [
         image: "barbara-ramos-graphic-designer.jpg"
     }
 ];
+
+//MILESTONE 1 Stampare su console le informazioni di nome, ruolo e la stringa della foto
+
+team.forEach(member => {
+    console.log(`Name: ${member.name}, 
+                Role: ${member.role}, 
+                Image: ${member.image}`);
+});
